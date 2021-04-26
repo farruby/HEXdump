@@ -71,5 +71,17 @@ namespace HexDump
             }
             return result.ToString();
         }
+        static void Main(string[] args)
+        {
+            byte[] Filename = System.IO.File.ReadAllBytes(@"YOUR PATH");
+            Console.WriteLine("\nbuffer dump of this file:\n");
+            //System.Diagnostics.Debug.WriteLine(Utils.HexDump(Filename));
+
+            Console.WriteLine(Utils.HexDump(Filename));
+
+            Console.WriteLine("\n\nPress any key to exit...");
+            Console.ReadKey();
         }
         }
+}
+    
